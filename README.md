@@ -1,19 +1,8 @@
 # React + TypeScript + Vite
 
-## Project Structure and Naming Convention
-### Folder Structure
-- `src` 
-  - is the root of the project and should contain minimal files
-- `src/lib`
-  - is for any code that is not react specific
-- `src/hooks` 
-  - is for any custom made hooks
-- `src/components`
-  - is for any custom made component
-- `src/pages` 
-  - is for any code that is a top level page which typically uses the components
-- `src/models`
-  - is for any object schema
+## Todo
+- Add login logic
+- Create the Game page
 
 ## File Structure and Naming Conventions
 
