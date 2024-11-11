@@ -4,5 +4,4 @@ set -e
 
 # lints the client and server
 
-./client/scripts/lint.sh
-./server/scripts/lint.sh
+./scripts/_lifecycle.sh lint
