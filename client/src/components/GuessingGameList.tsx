@@ -1,3 +1,5 @@
+/* eslint-disable no-empty-pattern */
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { Box, Button, List, ListItem, ListItemText, Paper, Typography } from '@mui/material';
 import React from 'react';
 
