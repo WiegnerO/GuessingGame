@@ -1,8 +1,14 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import LandingPage from "./pages/LandingPage"
-
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    fetch("/api/hello").then((r) => {
+      console.log(`API Status was: ${r.status}`)
+      return r.text()
+    }).then(t => console.log(`Backend says "${t}" (staus) `))
+  },[])
 
   return (
     <>

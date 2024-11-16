@@ -3,7 +3,7 @@ FROM node:20-alpine
 WORKDIR /app
 
 # Copy .env
-COPY .env .env
+COPY .env ../.env
 
 COPY server/package.json .
 RUN npm install --omit=dev
