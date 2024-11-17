@@ -2,10 +2,11 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# Copy .env
+# Copy .env (server expects .env to be in directory above it)
 COPY .env ../.env
 
-COPY server/package.json .
+# Dependencies required by the server runtime
+COPY server/package.json server/package-lock.json .
 RUN npm install --omit=dev
 
 # Copy client build
