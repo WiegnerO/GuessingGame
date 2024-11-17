@@ -4,4 +4,6 @@ set -e
 
 # Builds client and server projects
 
-./scripts/_lifecycle.sh build
+./scripts/_project_cmd.sh build
+
+docker build -t guessing-game .

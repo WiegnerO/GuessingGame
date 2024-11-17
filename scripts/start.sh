@@ -2,4 +2,6 @@
 
 set -e
 
-./scripts/_lifecycle.sh start
+./scripts/build.sh
+
+docker run -it --init -p 8080:8080 guessing-game
