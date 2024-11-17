@@ -16,12 +16,13 @@ lifecycle_script="$1"
 projects=("client" "server")
 
 for project in "${projects[@]}"; do
+
   echo "Running $lifecycle_script script for $project project..."
 
   # Check if the specified lifecycle script exists
   if [[ -f "./$project/scripts/$lifecycle_script.sh" ]]; then
     pushd ./"$project" > /dev/null
-    ./scripts/"$lifecycle_script.sh" || { echo "$project $lifecycle_script failed"; exit 1; }
+    ./scripts/"$lifecycle_script.sh" "$@" || { echo "$project $lifecycle_script failed"; exit 1; }
     popd > /dev/null
   else
     echo "Warning: $lifecycle_script script for $project not found!"

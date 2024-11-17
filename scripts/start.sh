@@ -2,6 +2,6 @@
 
 set -e
 
-# Starts client and server projects
+./scripts/build.sh
 
-echo "TODO: this will depend a bit on whether we set up Docker + Docker Compose"
+docker run -it --init -p 8080:8080 guessing-game

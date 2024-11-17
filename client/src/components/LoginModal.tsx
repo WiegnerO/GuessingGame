@@ -12,14 +12,10 @@ import {
 
 const UsernameLoginModal: React.FC = () => {
     const [open, setOpen] = useState(true);
-    const [errorMessage, setErrorMessage] = useState('');
-    const [loading, setLoading] = useState(false);
+    const [errorMessage] = useState('');
+    const [loading] = useState(false);
 
     // Open the modal
-    const handleClickOpen = () => {
-        setOpen(true);
-        console.log("opened")
-    };
 
     // Close the modal
     const handleClose = () => {
@@ -51,7 +47,7 @@ const UsernameLoginModal: React.FC = () => {
                         type="text"
                         fullWidth
                         variant="outlined"
-                        onChange={(e) => console.log("hi")}
+                        onChange={(_e) => console.log("hi")}
                         error={!!errorMessage}
                         helperText={errorMessage}
                     />
