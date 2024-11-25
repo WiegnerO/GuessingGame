@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "./App.css";
 import { Button } from "@nextui-org/react";
 
 function App() {
