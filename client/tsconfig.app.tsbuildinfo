@@ -1,1 +1,0 @@
-{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/GuessingGameList.tsx","./src/components/LoginModal.tsx","./src/components/NavBar.tsx","./src/lib/loginLogoutFunctionaility.ts","./src/lib/mockLoginLogoutApi.ts","./src/lib/sessionStorage.ts","./src/models/LoginResponse.ts","./src/pages/LandingPage.tsx"],"version":"5.6.2"}

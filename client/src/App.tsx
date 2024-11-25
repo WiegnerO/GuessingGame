@@ -1,25 +1,24 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import LandingPage from "./pages/LandingPage"
 import { useEffect } from "react";
+import { Button } from "@nextui-org/react";
 
 function App() {
   useEffect(() => {
-    fetch("/api/hello").then((r) => {
-      console.log(`API Status was: ${r.status}`)
-      return r.text()
-    }).then(t => console.log(`Backend says "${t}" (staus) `))
-  },[])
+    fetch("/api/hello")
+      .then((r) => {
+        console.log(`API Status was: ${r.status}`);
+        return r.text();
+      })
+      .then((t) => console.log(`Backend says "${t}" (staus) `));
+  }, []);
 
   return (
     <>
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
-        <Routes>
-          <Route path='/' element={<LandingPage />} />
-        </Routes>
-      </BrowserRouter>
-
+      <div>
+        <h1 className="text-3xl font-bold underline">Hello world!</h1>
+        <Button color="primary">Button</Button>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
